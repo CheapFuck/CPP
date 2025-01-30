@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-std::string replaceOccurrences(const std::string& content, const std::string& s1, const std::string& s2)
+std::string replaceOccurrences(const std::string &content, const std::string &s1, const std::string &s2)
 {
     if (s1.empty()) return content;
 
@@ -19,7 +19,7 @@ std::string replaceOccurrences(const std::string& content, const std::string& s1
     return result;
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     if (argc != 4)
     {

@@ -96,7 +96,7 @@ void Account::displayStatus(void) const
 void Account::_displayTimestamp(void)
 {
     std::time_t t = std::time(0);
-    std::tm* now = std::localtime(&t);
+    std::tm *now = std::localtime(&t);
     std::cout << "[" << (now->tm_year + 1900) 
               << std::setfill('0') << std::setw(2) << (now->tm_mon + 1)
               << std::setfill('0') << std::setw(2) << now->tm_mday << "_"

@@ -12,7 +12,7 @@ private:
 
 public:
     PhoneBook();
-    void addContact(const Contact& contact);
+    void addContact(const Contact &contact);
     void searchContact() const;
     void displayContacts() const;
 };

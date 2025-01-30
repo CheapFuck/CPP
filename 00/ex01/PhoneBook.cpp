@@ -5,7 +5,7 @@
 
 PhoneBook::PhoneBook() : count(0), oldest(0) {}
 
-void PhoneBook::addContact(const Contact& contact)
+void PhoneBook::addContact(const Contact &contact)
 {
     if (count < 8)
     {
