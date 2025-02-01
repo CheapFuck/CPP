@@ -3,7 +3,8 @@
 
 bool	bsp(Point const a, Point const b, Point const c, Point const point);
 
-int	main(void) {
+int	main(void)
+{
 	std::cout << std::boolalpha
 
 		<< "a(0, 0), b(0, 5), c(5, 0), point(1, 1): "
