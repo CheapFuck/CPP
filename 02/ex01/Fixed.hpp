@@ -37,4 +37,4 @@ public:
 
 std::ostream &operator<<(std::ostream &os,  Fixed const &fixed);
 
-#endif // FIXED_HPP
+#endif

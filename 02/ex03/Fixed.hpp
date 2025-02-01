@@ -56,5 +56,5 @@ public:
 	const static Fixed	&max(Fixed const &a, Fixed const &b);
 };
 
-#endif // FIXED_HPP
+#endif
 
