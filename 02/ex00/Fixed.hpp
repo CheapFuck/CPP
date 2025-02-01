@@ -8,8 +8,8 @@
 class Fixed
 {
 private:
-    int fixedPointNumberValue; // The raw fixed-point value
-    static const int fractionalBits = 8; // Number of fractional bits (constant)
+    int fixedPointNumberValue;
+    static const int fractionalBits = 8;
 
 public:
     // Default constructor

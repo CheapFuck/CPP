@@ -1,6 +1,4 @@
 #include <iostream>
-#include <string>
-#include <cctype>
 
 int main(int argc, char *argv[])
 {
@@ -13,7 +11,7 @@ int main(int argc, char *argv[])
     for (int i = 1; i < argc; ++i)
     {
         std::string arg(argv[i]);
-        for (size_t j = 0; j < arg.length(); ++j)
+        for (size_t j = 0; j < arg.length(); j++)
         {
             arg[j] = std::toupper(static_cast<unsigned char>(arg[j]));
         }

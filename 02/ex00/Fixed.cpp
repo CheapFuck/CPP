@@ -17,11 +17,11 @@ Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberV
 Fixed& Fixed::operator=(const Fixed &other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &other) // Check for self-assignment
+    if (this != &other)
     {
-        fixedPointNumberValue = other.getRawBits(); // Copy the value
+        fixedPointNumberValue = other.getRawBits();
     }
-    return *this; // Return the current object to allow chaining
+    return *this;
 }
 
 // Destructor

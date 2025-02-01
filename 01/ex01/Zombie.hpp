@@ -18,4 +18,6 @@ public:
     void announce();
 };
 
+Zombie* zombieHorde(int N, std::string name);
+
 #endif

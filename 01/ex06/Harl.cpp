@@ -1,6 +1,5 @@
 #include "Harl.hpp"
 
-// Private member function implementations
 void Harl::debug()
 {
     std::cout << "[ DEBUG ]" << std::endl;
