@@ -12,9 +12,7 @@ int main()
         {
             horde[i].announce();
         }
-
         delete[] horde;
     }
-
     return 0;
 }

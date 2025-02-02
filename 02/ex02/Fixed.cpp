@@ -5,7 +5,6 @@ Fixed::Fixed() : fixedPointNumberValue(0)
 {
 }
 
-
 Fixed::Fixed(const int number)
 {
 	fixedPointNumberValue = number <<  fractionalBits;

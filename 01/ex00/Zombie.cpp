@@ -1,6 +1,8 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string zombie_name) : name(zombie_name) {}
+Zombie::Zombie(std::string zombie_name) : name(zombie_name)
+{
+}
 
 Zombie::~Zombie()
 {
