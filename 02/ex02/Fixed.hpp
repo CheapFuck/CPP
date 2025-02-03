@@ -16,10 +16,8 @@ public:
 	Fixed(const float	number);
     // Copy constructor
     Fixed(const Fixed &other);
-
     // Copy assignment operator overload
     Fixed &operator=(const Fixed &other);
-
     // Destructor
     ~Fixed();
 
