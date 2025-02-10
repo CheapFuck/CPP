@@ -1,11 +1,11 @@
 #include "Fixed.hpp"
+#include <cmath> 
 
 // Default constructors
 Fixed::Fixed() : fixedPointNumberValue(0)
 {
     std::cout << "Default constructor called" << std::endl;
 }
-
 
 Fixed::Fixed(const int number)
 {
@@ -16,10 +16,10 @@ Fixed::Fixed(const int number)
 Fixed::Fixed(const float number)
 {
 
-	fixedPointNumberValue = static_cast<int>(number * (1 << fractionalBits));
+	// fixedPointNumberValue = static_cast<int>(number * (1 << fractionalBits));
+	fixedPointNumberValue = static_cast<int>(roundf(number * (1 << fractionalBits)));  // Round to nearest integer
 	std::cout << "Float constructor called" << std::endl;
 }
-
 
 // Copy constructor
 Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberValue)
@@ -32,7 +32,10 @@ Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberV
 Fixed &Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment constructor called\n";
-	setRawBits(other.getRawBits());
+	if (this != &other)
+	{
+    	setRawBits(other.getRawBits());
+	}
 	return (*this);
 }
 
@@ -54,7 +57,6 @@ void Fixed::setRawBits(int const raw)
 {
     fixedPointNumberValue = raw;
 }
-
 
 float Fixed::toFloat(void) const
 {
