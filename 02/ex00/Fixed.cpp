@@ -29,7 +29,7 @@ Fixed::~Fixed()
 }
 
 // Getter
-int Fixed::getRawBits() const
+int Fixed::getRawBits(void) const
 {    
     std::cout << "getRawBits member function called" << std::endl;
     return fixedPointNumberValue;

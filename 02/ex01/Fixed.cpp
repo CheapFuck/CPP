@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-#include <cmath> 
 
 // Default constructors
 Fixed::Fixed() : fixedPointNumberValue(0)
