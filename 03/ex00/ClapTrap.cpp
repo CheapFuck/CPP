@@ -34,12 +34,12 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string &target)
 {
-	if (this->hit_points == 0)
-		std::cout << this->Name << " is already dead and can not attack someone." << std::endl;
+	if (this->hit_points < 1)
+		std::cout << this->Name << " is dead and cannot attack someone." << std::endl;
 	else if (this->energy_points > 0)
 	{
 		std::cout << "ClapTrap " << this->Name << " attacks " << target << ", causing " << attack_damage << " points of damage!" << std::endl;
-		this->energy_points -= 1;
+		this->energy_points--;
 	}
 	else
 		std::cout << "Not enough energy points for attack" << std::endl;
@@ -47,27 +47,27 @@ void ClapTrap::attack(const std::string &target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->hit_points == 0 && amount != 0)
-		std::cout << this->Name << " is already dead and can not be more demaged." << std::endl;
+	if (this->hit_points < 1 && amount > 0)
+		std::cout << this->Name << " has zero hit points, cannot go below zero" << std::endl;
 	else
 	{
 		std::cout << "ClapTrap " << this->Name << " took " << amount << " points of damage!" << std::endl;
 		if (amount > this->hit_points)
 			this->hit_points = 0;
 		else
-			this->hit_points -= amount;
+			this->hit_points = this->hit_points - amount;
 	}
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->hit_points == 0)
-		std::cout << this->Name << " is already dead and can not be rapaired." << std::endl;
+	if (this->hit_points < 1>)
+		std::cout << this->Name << " is already dead and cannot be repaired." << std::endl;
 	else if (this->energy_points > 0)
 	{
 		std::cout << "ClapTrap " << this->Name << " got " << amount << " points of hit points!" << std::endl;
 		this->hit_points += amount;
-		this->energy_points -= 1;
+		this->energy_points--;
 	}
 	else
 		std::cout << "Not enough energy points for being repaired" << std::endl;

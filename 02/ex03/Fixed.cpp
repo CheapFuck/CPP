@@ -146,7 +146,6 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-
 std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
 {
     os << fixed.toFloat();
