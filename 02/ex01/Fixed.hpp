@@ -16,9 +16,9 @@ public:
 	Fixed(const int number);
 	Fixed(const float number);
     // Copy constructor
-    Fixed(const Fixed &other);
+    Fixed(const Fixed& other);
     // Copy assignment operator overload
-    Fixed 	&operator=(const Fixed &other);
+    Fixed&  operator=(const Fixed& other);
     // Destructor
     ~Fixed();
 

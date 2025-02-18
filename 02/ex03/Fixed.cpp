@@ -12,7 +12,7 @@ Fixed::Fixed(const int number)
 
 Fixed::Fixed(const float number)
 {
-	fixedPointNumberValue = static_cast<int>(number * (1 << fractionalBits));
+	fixedPointNumberValue = static_cast<int>(roundf(number * (1 << fractionalBits)));  // Round to nearest integer
 }
 
 // Copy constructors

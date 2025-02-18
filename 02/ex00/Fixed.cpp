@@ -18,8 +18,10 @@ Fixed& Fixed::operator=(const Fixed &other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other)
-        fixedPointNumberValue = other.getRawBits();
-    return *this;
+	{
+    	setRawBits(other.getRawBits());
+	}
+	return (*this);
 }
 
 // Destructor
