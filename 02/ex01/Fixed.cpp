@@ -19,14 +19,14 @@ Fixed::Fixed(const float number)
 }
 
 // Copy constructor
-Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberValue)
+Fixed::Fixed(const Fixed& other) : fixedPointNumberValue(other.fixedPointNumberValue)
 {
     std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
 // Copy assignment operator
-Fixed &Fixed::operator=(const Fixed &other)
+Fixed &Fixed::operator=(const Fixed& other)
 {
 	std::cout << "Copy assignment constructor called\n";
 	if (this != &other)
@@ -65,7 +65,7 @@ int Fixed::toInt(void) const
 	return (fixedPointNumberValue >> fractionalBits);
 }
 
-std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 {
     os << fixed.toFloat();
     return os;

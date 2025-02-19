@@ -13,7 +13,7 @@ public:
     // Default constructor
     Fixed();
     // Copy constructor
-    Fixed(const Fixed &other);
+    Fixed(const Fixed& other);
     // Copy assignment operator overload
     Fixed& operator=(const Fixed& other);
     // Destructor

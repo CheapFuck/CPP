@@ -7,14 +7,14 @@ Fixed::Fixed() : fixedPointNumberValue(0)
 }
 
 // Copy constructor
-Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberValue)
+Fixed::Fixed(const Fixed& other) : fixedPointNumberValue(other.fixedPointNumberValue)
 {
     std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
 // Copy assignment operator
-Fixed& Fixed::operator=(const Fixed &other)
+Fixed& Fixed::operator=(const Fixed& other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other)

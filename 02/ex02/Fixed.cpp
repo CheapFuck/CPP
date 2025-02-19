@@ -19,14 +19,14 @@ Fixed::Fixed(const float number)
 }
 
 // Copy constructors
-Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberValue)
+Fixed::Fixed(const Fixed& other) : fixedPointNumberValue(other.fixedPointNumberValue)
 {
 	*this = other;
     // std::cout << "Copy constructor called" << std::endl;
 }
 
 // Copy assignment operator
-Fixed &Fixed::operator=(const Fixed &other)
+Fixed &Fixed::operator=(const Fixed& other)
 {
 	// std::cout << "Copy assignment constructor called\n";
 	if (this != &other)
@@ -64,28 +64,28 @@ int Fixed::toInt(void) const
 	return (fixedPointNumberValue >> fractionalBits);
 }
 
-Fixed &Fixed::min(Fixed &a, Fixed &b)
+Fixed& Fixed::min(Fixed& a, Fixed& b)
 {
 	if (a < b)
 		return (a);
 	return (b);
 }
 
-Fixed &Fixed::max(Fixed &a, Fixed &b)
+Fixed& Fixed::max(Fixed& a, Fixed& b)
 {
 	if (a > b)
 		return (a);
 	return (b);	
 }
 
-const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
 {
 	if (a < b)
 		return (a);
 	return (b);
 }
 
-const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
 {
 	if (a > b)
 		return (a);
@@ -93,52 +93,52 @@ const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
 }
 
 // Overload operators
-bool Fixed::operator>(const Fixed &other) const
+bool Fixed::operator>(const Fixed& other) const
 {
 	return (fixedPointNumberValue > other.fixedPointNumberValue);
 }
 
-bool Fixed::operator<(const Fixed &other) const
+bool Fixed::operator<(const Fixed& other) const
 {
 	return (fixedPointNumberValue < other.fixedPointNumberValue);
 }
 
-bool Fixed::operator>=(const Fixed &other) const
+bool Fixed::operator>=(const Fixed& other) const
 {
 	return (fixedPointNumberValue >= other.fixedPointNumberValue);
 }
 
-bool Fixed::operator<=(const Fixed &other) const
+bool Fixed::operator<=(const Fixed& other) const
 {
 	return (fixedPointNumberValue <= other.fixedPointNumberValue);
 }
 
-bool Fixed::operator==(const Fixed &other) const
+bool Fixed::operator==(const Fixed& other) const
 {
 	return (fixedPointNumberValue == other.fixedPointNumberValue);
 }
 
-bool Fixed::operator!=(const Fixed &other) const
+bool Fixed::operator!=(const Fixed& other) const
 {
 	return (fixedPointNumberValue != other.fixedPointNumberValue);
 }
 
-Fixed Fixed::operator+(const Fixed &other) const
+Fixed Fixed::operator+(const Fixed& other) const
 {
 	return (Fixed(toFloat() + other.toFloat()));
 }
 
-Fixed Fixed::operator-(const Fixed &other) const
+Fixed Fixed::operator-(const Fixed& other) const
 {
 	return (Fixed(toFloat() - other.toFloat()));
 }
 
-Fixed Fixed::operator*(const Fixed &other) const
+Fixed Fixed::operator*(const Fixed& other) const
 {
 	return (Fixed(toFloat() * other.toFloat()));
 }
 
-Fixed Fixed::operator/(const Fixed &other) const
+Fixed Fixed::operator/(const Fixed& other) const
 {
 	if (other != 0)
 		return (Fixed(toFloat() / other.toFloat()));
@@ -172,7 +172,7 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
+std::ostream& operator<<(std::ostream& os, Fixed const& fixed)
 {
     os << fixed.toFloat();
     return os;
