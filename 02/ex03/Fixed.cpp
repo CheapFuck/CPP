@@ -146,11 +146,11 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
-{
-    os << fixed.toFloat();
-    return os;
- }
+// std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
+// {
+//     os << fixed.toFloat();
+//     return os;
+//  }
 
 Fixed const &min(Fixed const &a, Fixed const &b) {
 	return Fixed::min(a, b);

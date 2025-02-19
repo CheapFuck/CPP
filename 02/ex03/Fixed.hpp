@@ -52,6 +52,12 @@ public:
 
     const static Fixed	&min(Fixed const &a, Fixed const &b);
 	const static Fixed	&max(Fixed const &a, Fixed const &b);
+
+	    // Overload the << operator to print Fixed objects
+    friend std::ostream& operator<<(std::ostream& out, const Fixed& fixed) {
+        out << fixed.toFloat();
+        return out;
+    }
 };
 
 #endif
