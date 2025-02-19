@@ -146,11 +146,13 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-Fixed const &min(Fixed const &a, Fixed const &b) {
+Fixed const &min(Fixed const& a, Fixed const& b)
+{
 	return Fixed::min(a, b);
 }
 
-Fixed const &max(Fixed const &a, Fixed const &b) {
+Fixed const &max(Fixed const& a, Fixed const& b)
+{
 	return Fixed::max(a, b);
 }
 

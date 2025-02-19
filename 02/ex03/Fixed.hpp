@@ -50,8 +50,8 @@ public:
 	Fixed	operator -- (void);
 	Fixed	operator -- (int);
 
-    const static Fixed	&min(Fixed const &a, Fixed const &b);
-	const static Fixed	&max(Fixed const &a, Fixed const &b);
+    const static Fixed	&min(Fixed const& a, Fixed const& b);
+	const static Fixed	&max(Fixed const& a, Fixed const& b);
 };
 
 std::ostream &operator<<(std::ostream& os,  Fixed const& fixed);

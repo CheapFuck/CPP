@@ -9,14 +9,14 @@ Point::~Point()
 {
 }
 
-Point::Point(Point const &other)
+Point::Point(Point const& other)
 {
 	*this = other;
 }
 
 Point::Point(Fixed const x, Fixed const y): x(x), y(y) {}
 
-Point&	Point::operator=(Point const &other)
+Point&	Point::operator=(Point const& other)
 {
 	(void)other;
 	return *this;
