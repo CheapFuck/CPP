@@ -22,27 +22,29 @@ public:
     // Destructor
     ~Fixed();
 
-    // Getter function to return the raw value of the fixed-point number
-    int getRawBits() const;
-    // Setter function to set the raw value of the fixed-point number
-    void setRawBits(int const raw);
-    float				toFloat(void) const;
-	int					toInt(void) const;
+    int					getRawBits( void ) const;
+    void				setRawBits( int const raw );
+    float				toFloat( void ) const;
+	int					toInt( void ) const;
+
+	// overload member functions
     static Fixed		&min(Fixed& a, Fixed& b);
 	static Fixed		&max(Fixed& a, Fixed& b);
 	static const Fixed	&min(const Fixed& a, const Fixed& b);
 	static const Fixed	&max(const Fixed& a, const Fixed& b);
-	// Overload operators
+	// comparison operators
 	bool 				operator > (const Fixed& other) const;
 	bool 				operator < (const Fixed& other) const;
 	bool 				operator >= (const Fixed& other) const;
 	bool 				operator <= (const Fixed& other) const;
 	bool 				operator == (const Fixed& other) const;
 	bool 				operator != (const Fixed& other) const;
+	// arithmic operators
 	Fixed 				operator + (const Fixed& other) const;
 	Fixed 				operator - (const Fixed& other) const;
 	Fixed 				operator * (const Fixed& other) const;
 	Fixed 				operator / (const Fixed& other) const;
+	// increment/decrement
 	Fixed 				operator ++ (void);
 	Fixed 				operator ++ (int);
 	Fixed 				operator -- (void);
