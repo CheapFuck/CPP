@@ -1,7 +1,6 @@
 #include "ScavTrap.hpp"
 
 int main() {
-<<<<<<< HEAD
     std::cout << "=== Testing ClapTrap ===" << std::endl;
     ClapTrap clap("Clappy");
     clap.attack("Target");
@@ -24,10 +23,3 @@ int main() {
 
     return 0;
 }
-=======
-    ScavTrap scav("Scavvy");
-    scav.attack("Enemy");
-    scav.guardGate();
-    return 0;
-}
->>>>>>> 1f377b0e7598102e5ad0de0c1fed8cf1682a1cb7

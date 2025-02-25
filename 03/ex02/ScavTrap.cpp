@@ -1,5 +1,4 @@
 #include "ScavTrap.hpp"
-#include <iostream>
 
 ScavTrap::ScavTrap() : ClapTrap() {
     _hitPoints = 100;
