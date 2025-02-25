@@ -18,10 +18,8 @@ public:
 	Fixed(const float number);
     // Copy constructor
     Fixed(const Fixed &other);
-
     // Copy assignment operator overload
-    Fixed &operator=(const Fixed &other);
-
+    Fixed& operator=(const Fixed& other);
     // Destructor
     ~Fixed();
 
@@ -52,9 +50,11 @@ public:
 	Fixed	operator -- (void);
 	Fixed	operator -- (int);
 
-    const static Fixed	&min(Fixed const &a, Fixed const &b);
-	const static Fixed	&max(Fixed const &a, Fixed const &b);
+    const static Fixed	&min(Fixed const& a, Fixed const& b);
+	const static Fixed	&max(Fixed const& a, Fixed const& b);
 };
+
+std::ostream &operator<<(std::ostream& os,  Fixed const& fixed);
 
 #endif
 

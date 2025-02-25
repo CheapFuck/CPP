@@ -12,7 +12,7 @@ Fixed::Fixed(const int number)
 
 Fixed::Fixed(const float number)
 {
-	fixedPointNumberValue = static_cast<int>(number * (1 << fractionalBits));
+	fixedPointNumberValue = static_cast<int>(roundf(number * (1 << fractionalBits)));  // Round to nearest integer
 }
 
 // Copy constructors
@@ -22,7 +22,7 @@ Fixed::Fixed(const Fixed &other) : fixedPointNumberValue(other.fixedPointNumberV
 }
 
 // Copy assignment operator
-Fixed &Fixed::operator=(const Fixed &other)
+Fixed& Fixed::operator=(const Fixed& other)
 {
 	setRawBits(other.getRawBits());
 	return (*this);
@@ -55,14 +55,14 @@ int Fixed::toInt(void) const
 	return (fixedPointNumberValue >> fractionalBits);
 }
 
-const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+const Fixed& Fixed::min(const Fixed &a, const Fixed &b)
 {
 	if (a < b)
 		return (a);
 	return (b);
 }
 
-const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
 {
 	if (a > b)
 		return (a);
@@ -146,17 +146,18 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-
-std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
+Fixed const &min(Fixed const& a, Fixed const& b)
 {
-    os << fixed.toFloat();
-    return os;
- }
-
-Fixed const &min(Fixed const &a, Fixed const &b) {
 	return Fixed::min(a, b);
 }
 
-Fixed const &max(Fixed const &a, Fixed const &b) {
+Fixed const &max(Fixed const& a, Fixed const& b)
+{
 	return Fixed::max(a, b);
+}
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
+{
+    os << fixed.toFloat();
+    return os;
 }

@@ -1,23 +1,20 @@
-CC		=	clang++
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+NAME = bsp
 
-NAME	=	bsp
-FILES	=	main.cpp bsp.cpp Fixed.cpp Point.cpp
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-OBJ		=	$(FILES:.cpp=.o)
+SRC = main.cpp bsp.cpp Fixed.cpp Point.cpp
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $^ -o $@
-
-%.o: %.cpp
-	$(CC) $(CFLAGS) -c $^ -o $@
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 clean:
-	$(RM) $(OBJ) $(wildcard *.gch)
+	rm -f $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME) $(TEST)
+	rm -f $(NAME)
 
 re: fclean all
