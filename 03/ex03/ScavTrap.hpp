@@ -3,7 +3,8 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : virtual public ClapTrap {  // Add virtual keyword
+class ScavTrap : virtual public ClapTrap  // Add virtual keyword
+{
 public:
     ScavTrap();
     ScavTrap(const std::string& name);

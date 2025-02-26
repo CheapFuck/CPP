@@ -3,7 +3,8 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap {  // Add virtual keyword
+class FragTrap : virtual public ClapTrap   // Add virtual keyword
+{
 public:
     FragTrap();
     FragTrap(const std::string& name);
