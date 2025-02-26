@@ -2,7 +2,8 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main() {
+int main()
+{
     std::cout << "\n=== Testing ClapTrap ===" << std::endl;
     ClapTrap clap("Clappy");
     clap.attack("Target");
@@ -25,6 +26,5 @@ int main() {
         FragTrap temp("Temporary");
         std::cout << "\nFragTrap about to be destroyed:" << std::endl;
     }
-
     return 0;
 }

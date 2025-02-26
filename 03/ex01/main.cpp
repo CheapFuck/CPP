@@ -1,6 +1,7 @@
 #include "ScavTrap.hpp"
 
-int main() {
+int main()
+{
     std::cout << "=== Testing ClapTrap ===" << std::endl;
     ClapTrap clap("Clappy");
     clap.attack("Target");
