@@ -9,19 +9,21 @@ int main()
     ClapTrap assigned;                      // Default constructor
 
     assigned = bob;                         // Assignment operator
-    std::cout << "\n--- Testing basic functionality ---\n" << std::endl;
+    std::cout << "\nTESTING\n" << std::endl;
     // Test basic functionality
     bob.attack("Target Dummy");
     bob.takeDamage(5);
     bob.beRepaired(3);
-    std::cout << "\n--- Testing energy depletion ---\n" << std::endl;
+    bob.reset();
+    // bob._energyPoints = 10;
+    std::cout << "\n--- energy depletion ---\n" << std::endl;
     // Test energy point depletion (10 actions)
     for (int i = 0; i < 11; i++)
     {
         std::cout << "Action " << i + 1 << ": ";
         bob.attack("Target Dummy");
     }
-    std::cout << "\n--- Testing death ---\n" << std::endl;
+    std::cout << "\n--- death ---\n" << std::endl;
     // Test death
     ClapTrap kenny("Kenny");
     kenny.takeDamage(15);  // Overkill damage

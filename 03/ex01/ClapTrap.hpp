@@ -1,5 +1,6 @@
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+// #ifndef CLAPTRAP_HPP
+// #define CLAPTRAP_HPP
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -24,4 +25,4 @@ public:
     void beRepaired(unsigned int amount);
 };
 
-#endif
+// #endif

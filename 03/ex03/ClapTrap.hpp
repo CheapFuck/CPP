@@ -1,5 +1,7 @@
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#pragma once
+
+// #ifndef CLAPTRAP_HPP
+// #define CLAPTRAP_HPP
 
 #include <string>
 #include <iostream>
@@ -24,4 +26,4 @@ public:
     virtual void beRepaired(unsigned int amount);
 };
 
-#endif
+// #endif

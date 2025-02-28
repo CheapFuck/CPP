@@ -1,5 +1,6 @@
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#pragma once
+// #ifndef SCAVTRAP_HPP
+// #define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
 
@@ -16,4 +17,4 @@ public:
     void guardGate();
 };
 
-#endif
+// #endif

@@ -38,12 +38,12 @@ ClapTrap::~ClapTrap()
 // Member functions
 void ClapTrap::attack(const std::string& target)
 {
+    std::cout << "ENERGIE PUNTEN ZIJN OP DIT MOMENT: " << _energyPoints << std::endl;
     if (_energyPoints == 0 || _hitPoints == 0)
 	{
         std::cout << "ClapTrap " << _name << " can't attack - no energy or hit points left!" << std::endl;
         return;
     }
-    std::cout << "\n attak is : " << _attackDamage << std::endl;
     std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
     _energyPoints--;
 }
@@ -81,4 +81,12 @@ void ClapTrap::beRepaired(unsigned int amount)
     _hitPoints += amount;
     _energyPoints--;
     std::cout << "ClapTrap " << _name << " repairs itself for " << amount << " points! Current HP: " << _hitPoints << std::endl;
+}
+
+
+void ClapTrap::reset(void)
+{
+    _energyPoints = 10;
+	_hitPoints = 10;
+    std::cout << "ClapTrap " << _name << " reset " << std::endl;
 }

@@ -1,6 +1,6 @@
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
-
+// #ifndef CLAPTRAP_HPP
+// #define CLAPTRAP_HPP
+#pragma once
 #include <string>
 #include <iostream>
 
@@ -14,7 +14,7 @@ private:
 
 public:
     // Orthodox Canonical Form requirements
-    ClapTrap();                                  // Default constructor
+    ClapTrap();                                 // Default constructor
     ClapTrap(const std::string& name);          // Parameterized constructor
     ClapTrap(const ClapTrap& other);            // Copy constructor
     ClapTrap& operator=(const ClapTrap& other); // Copy assignment operator
@@ -24,6 +24,9 @@ public:
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
+
+    // random member functions
+    void reset(void);
 };
 
-#endif
+// #endif
