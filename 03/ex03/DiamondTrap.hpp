@@ -17,10 +17,10 @@ public:
     DiamondTrap(const std::string& name);
     DiamondTrap(const DiamondTrap& other);
     DiamondTrap& operator=(const DiamondTrap& other);
-    ~DiamondTrap();
+    ~DiamondTrap() override;
 
     void whoAmI();
-    void attack(const std::string& target);
+    void attack(const std::string& target) override;
 };
 
 // #endif
