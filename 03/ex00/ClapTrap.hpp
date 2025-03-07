@@ -1,5 +1,3 @@
-// #ifndef CLAPTRAP_HPP
-// #define CLAPTRAP_HPP
 #pragma once
 #include <string>
 #include <iostream>
@@ -9,6 +7,7 @@ class ClapTrap
 private:
     std::string     _name;
     unsigned int    _hitPoints;
+    unsigned int    _maxHitPoints;
     unsigned int    _energyPoints;
     unsigned int    _attackDamage;
 
@@ -28,5 +27,3 @@ public:
     // random member functions
     void reset(void);
 };
-
-// #endif

@@ -14,7 +14,8 @@ int main()
     bob.attack("Target Dummy");
     bob.takeDamage(5);
     bob.beRepaired(3);
-    bob.reset();
+    bob.beRepaired(3);
+    // bob.reset();
     // bob._energyPoints = 10;
     std::cout << "\n--- energy depletion ---\n" << std::endl;
     // Test energy point depletion (10 actions)

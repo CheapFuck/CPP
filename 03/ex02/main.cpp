@@ -11,6 +11,9 @@ int main()
     std::cout << "\n=== Testing ScavTrap ===" << std::endl;
     ScavTrap scav("Scavvy");
     scav.attack("Target");
+    scav.takeDamage(30);         // Higher HP pool
+    scav.beRepaired(20);         // Higher HP pool
+    scav.beRepaired(50);         // Higher HP pool
     scav.guardGate();
     
     std::cout << "\n=== Testing FragTrap ===" << std::endl;
@@ -18,6 +21,7 @@ int main()
     frag.attack("Target");
     frag.takeDamage(50);
     frag.beRepaired(30);
+    frag.beRepaired(123);
     frag.highFivesGuys();
     
     std::cout << "\n=== Testing Construction/Destruction Order ===" << std::endl;

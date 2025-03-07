@@ -1,7 +1,4 @@
 #pragma once
-// #ifndef FRAGTRAP_HPP
-// #define FRAGTRAP_HPP
-
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
@@ -13,7 +10,9 @@ public:
     FragTrap& operator=(const FragTrap& other);
     ~FragTrap() override;
 
+    void attack(const std::string& target) override;  // Override attack
+    void takeDamage(unsigned int amount) override;
+    void beRepaired(unsigned int amount) override;
+
     void highFivesGuys(void);
 };
-
-// #endif

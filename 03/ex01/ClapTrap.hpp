@@ -1,7 +1,4 @@
-// #ifndef CLAPTRAP_HPP
-// #define CLAPTRAP_HPP
 #pragma once
-
 #include <string>
 #include <iostream>
 
@@ -10,6 +7,7 @@ class ClapTrap
 protected:
     std::string     _name;
     unsigned int    _hitPoints;
+    unsigned int    _maxHitPoints;
     unsigned int    _energyPoints;
     unsigned int    _attackDamage;
 
@@ -23,6 +21,6 @@ public:
     virtual void attack(const std::string& target);  // Added virtual keyword
     virtual void takeDamage(unsigned int amount);
     virtual void beRepaired(unsigned int amount);
-};
 
-// #endif
+    //virtual void reset(void);
+};

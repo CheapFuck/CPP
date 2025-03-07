@@ -7,12 +7,14 @@ int main()
     clap.attack("Target");
     clap.takeDamage(5);
     clap.beRepaired(3);
+    clap.beRepaired(33);
 
     std::cout << "\n=== Testing ScavTrap ===" << std::endl;
     ScavTrap scav("Scavvy");
     scav.attack("Target");        // Different message from ClapTrap
     scav.takeDamage(30);         // Higher HP pool
     scav.beRepaired(20);         // Higher HP pool
+    scav.beRepaired(50);         // Higher HP pool
     scav.guardGate();            // Special ability
 
     std::cout << "\n=== Testing Construction/Destruction Order ===" << std::endl;
