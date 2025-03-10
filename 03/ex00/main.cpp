@@ -24,7 +24,7 @@ int main()
         std::cout << "Action " << i + 1 << ": ";
         bob.attack("Target Dummy");
     }
-    std::cout << "\n--- death ---\n" << std::endl;
+    std::cout << "\n--- test death ---\n" << std::endl;
     // Test death
     ClapTrap kenny("Kenny");
     kenny.takeDamage(15);  // Overkill damage

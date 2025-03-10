@@ -1,8 +1,4 @@
 #pragma once
-
-// #ifndef DIAMONDTRAP_HPP
-// #define DIAMONDTRAP_HPP
-
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
@@ -10,7 +6,7 @@
 class DiamondTrap : public ScavTrap, public FragTrap
 {
 private:
-    std::string name;  // DiamondTrap's name attribute (same name as ClapTrap's attribute)
+    std::string _name;
 
 public:
     DiamondTrap();
@@ -19,8 +15,10 @@ public:
     DiamondTrap& operator=(const DiamondTrap& other);
     ~DiamondTrap() override;
 
-    void whoAmI();
     void attack(const std::string& target) override;
-};
+    void takeDamage(unsigned int amount) override;
+    void beRepaired(unsigned int amount) override;
 
-// #endif
+    void whoAmI();
+    // int getEnergyPoints();
+};

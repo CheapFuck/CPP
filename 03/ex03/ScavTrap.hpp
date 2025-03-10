@@ -1,11 +1,7 @@
 #pragma once
-
-// #ifndef SCAVTRAP_HPP
-// #define SCAVTRAP_HPP
-
 #include "ClapTrap.hpp"
 
-class ScavTrap : virtual public ClapTrap  // Add virtual keyword
+class ScavTrap : virtual public ClapTrap
 {
 public:
     ScavTrap();
@@ -15,7 +11,12 @@ public:
     ~ScavTrap() override;
 
     void attack(const std::string& target) override;
+    void takeDamage(unsigned int amount) override;
+    void beRepaired(unsigned int amount) override;
     void guardGate();
-};
 
-// #endif
+protected:
+	static unsigned int const _scavHitPoints = 100;
+	static unsigned int const _scavEnergyPoints = 50;
+	static unsigned int const _scavAttackDamage = 20;
+};

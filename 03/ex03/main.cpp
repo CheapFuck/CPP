@@ -2,8 +2,6 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
-// #include <iostream>
-
 int main()
 {
     std::cout << "\n=== Testing ClapTrap ===" << std::endl;
@@ -31,12 +29,13 @@ int main()
     
     // Test attributes
     diamond.takeDamage(30);          // HP from FragTrap (100)
-    
+  
     // Test energy consumption (multiple attacks to see energy depleting)
     std::cout << "\nTesting energy consumption (from ScavTrap: 50 points)" << std::endl;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 60; i++)
     {
         diamond.attack("Target");
+        // std::cout << "energy points: " << diamond.getEnergyPoints()<< std::endl;
     }
     std::cout << "\n=== Testing Construction/Destruction Order ===" << std::endl;
     {

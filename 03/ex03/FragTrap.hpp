@@ -1,11 +1,7 @@
 #pragma once
-
-// #ifndef FRAGTRAP_HPP
-// #define FRAGTRAP_HPP
-
 #include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap   // Add virtual keyword
+class FragTrap : virtual public ClapTrap
 {
 public:
     FragTrap();
@@ -14,7 +10,13 @@ public:
     FragTrap& operator=(const FragTrap& other);
     ~FragTrap() override;
 
+    void attack(const std::string& target) override;
+    void takeDamage(unsigned int amount) override;
+    void beRepaired(unsigned int amount) override;
     void highFivesGuys(void);
-};
 
-// #endif
+protected:
+	static unsigned int const _fragHitPoints = 100;
+	static unsigned int const _fragEnergyPoints = 100;
+	static unsigned int const _fragAttackDamage = 30;
+};
