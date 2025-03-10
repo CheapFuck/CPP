@@ -14,7 +14,7 @@ DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"
     _energyPoints = ScavTrap::_scavEnergyPoints; // 50 from ScavTrap
     _attackDamage = FragTrap::_fragAttackDamage; // 30 from FragTrap
     std::cout << "DiamondTrap parameterized constructor called for " << _name << std::endl;
-    // std::cout << "Energy Points: " << this->_energyPoints << std::endl; // Should output the correct value
+    // std::cout << "Energy Points: " << this->_energyPoints << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other), ScavTrap(other), FragTrap(other)
@@ -41,13 +41,12 @@ DiamondTrap::~DiamondTrap()
 
 void DiamondTrap::whoAmI()
 {
-    std::cout << "I am DiamondTrap " << _name 
-              << ", also known as ClapTrap " << ClapTrap::_name << std::endl;
+    std::cout << "I am DiamondTrap " << _name << ", also known as ClapTrap " << ClapTrap::_name << std::endl;
 }
 
 void DiamondTrap::attack(const std::string& target)
 {
-    ScavTrap::attack(target);  // Use ScavTrap's attack function
+    ScavTrap::attack(target);
 }
 
 
