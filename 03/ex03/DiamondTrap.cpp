@@ -71,12 +71,12 @@ void DiamondTrap::takeDamage(unsigned int amount)
 
 void DiamondTrap::beRepaired(unsigned int amount)
 {
-    if (_energyPoints == 0)
+    if (_energyPoints <= 0)
 	{
         std::cout << "DiamondTrap " << _name << " can't repair - no energy points left!" << std::endl;
         return ;
     }
-    if (_hitPoints == 0)
+    if (_hitPoints <= 0)
 	{
         std::cout << "DiamondTrap " << _name << " can't repair - already defeated!" << std::endl;
         return ;

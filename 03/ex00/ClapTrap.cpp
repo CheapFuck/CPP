@@ -23,7 +23,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	{
         _name = other._name;
         _hitPoints = other._hitPoints;
-        _maxHitPoints = other._hitPoints;
+        _maxHitPoints = _hitPoints;
         _energyPoints = other._energyPoints;
         _attackDamage = other._attackDamage;
     }
@@ -37,12 +37,12 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-    if (_energyPoints == 0)
+    if (_energyPoints <= 0)
 	{
         std::cout << "ClapTrap " << _name << " can't attack - no energy points left!" << std::endl;
         return ;
     }
-    if (_hitPoints == 0)
+    if (_hitPoints <= 0)
 	{
         std::cout << "ClapTrap " << _name << " can't attack - no hit points left!" << std::endl;
         return ;
@@ -53,7 +53,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (_hitPoints == 0)
+    if (_hitPoints <= 0)
 	{
         std::cout << "ClapTrap " << _name << " is already defeated!" << std::endl;
         return ;
@@ -72,12 +72,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (_energyPoints == 0)
+    if (_energyPoints <= 0)
 	{
         std::cout << "ClapTrap " << _name << " can't repair - no energy points left!" << std::endl;
         return ;
     }
-    if (_hitPoints == 0)
+    if (_hitPoints <= 0)
 	{
         std::cout << "ClapTrap " << _name << " can't repair - already defeated!" << std::endl;
         return ;
@@ -97,10 +97,10 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
 }
 
-void ClapTrap::reset(void)
-{
-    _energyPoints = 10;
-	_hitPoints = 10;
-    _attackDamage = 0;
-    std::cout << "ClapTrap " << _name << " reset " << std::endl;
-}
+// void ClapTrap::reset(void)
+// {
+//     _energyPoints = 10;
+// 	_hitPoints = 10;
+//     _attackDamage = 0;
+//     std::cout << "ClapTrap " << _name << " reset " << std::endl;
+// }

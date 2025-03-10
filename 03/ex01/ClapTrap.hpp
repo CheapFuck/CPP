@@ -18,7 +18,7 @@ public:
     ClapTrap& operator=(const ClapTrap& other);
     virtual ~ClapTrap();
 
-    virtual void attack(const std::string& target);  // Added virtual keyword
+    virtual void attack(const std::string& target);
     virtual void takeDamage(unsigned int amount);
     virtual void beRepaired(unsigned int amount);
 

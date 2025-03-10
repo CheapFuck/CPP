@@ -11,11 +11,11 @@ int main()
 
     std::cout << "\n=== Testing ScavTrap ===" << std::endl;
     ScavTrap scav("Scavvy");
-    scav.attack("Target");        // Different message from ClapTrap
-    scav.takeDamage(30);         // Higher HP pool
-    scav.beRepaired(20);         // Higher HP pool
-    scav.beRepaired(50);         // Higher HP pool
-    scav.guardGate();            // Special ability
+    scav.attack("Target");
+    scav.takeDamage(30);
+    scav.beRepaired(20);
+    scav.beRepaired(50);
+    scav.guardGate();
 
     std::cout << "\n=== Testing Construction/Destruction Order ===" << std::endl;
     {
@@ -23,6 +23,5 @@ int main()
         ScavTrap temp("Temporary");
         std::cout << "\nScavTrap about to be destroyed:" << std::endl;
     }
-
     return 0;
 }
