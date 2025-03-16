@@ -5,6 +5,7 @@
     WrongCat::WrongCat() : WrongAnimal()
     {
         _type = "WrongCat";
+        this->brain = new Brain();  // Allocate a new Brain for this Cat
         std::cout << "WrongCat default constructor called" << std::endl;
     }
 
@@ -20,6 +21,9 @@
     // Copy constructor
     WrongCat::WrongCat(const WrongCat& other)
     {
+        _type = other._type;
+        this->brain = new Brain();  // Allocate a new Brain for the copy
+        *this->brain = *other.brain;  // 
         std::cout << "WrongCat copy constructor called" << std::endl;
         *this = other;
     }
@@ -39,6 +43,7 @@
     // Destructor
     WrongCat::~WrongCat()
     {
+        delete brain;
         std::cout << "WrongCat destructor called" << std::endl;
     }
 
