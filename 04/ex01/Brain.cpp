@@ -36,6 +36,6 @@
     // Destructor
     Brain::~Brain()
     {
-           std::cout << "Brain destructor called\n";
+        std::cout << "Brain destructor called\n";
     }
 
