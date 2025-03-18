@@ -6,18 +6,15 @@ class Animal
 {
 
 protected:
-    std::string _type;
+    std::string type;
 
 public:
-    Animal();                                 // Default constructor
-    // Animal(const std::string _type);          // Parameterized constructor
-    Animal(const Animal& other);            // Copy constructor
-    Animal& operator=(const Animal& other); // Copy assignment operator
-    virtual ~Animal();                                // Destructor
+    Animal();
+    Animal(const Animal& other);
+    Animal& operator=(const Animal& other);
+    virtual ~Animal();
 
-    void setType(std::string animal_name);
-    std::string getType(void) const;
-
+    void setType(std::string animal_type);
+    const std::string& getType(void) const;
     virtual void makeSound() const = 0;
-
 };
