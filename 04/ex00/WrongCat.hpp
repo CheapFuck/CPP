@@ -10,6 +10,6 @@ public:
     WrongCat& operator=(const WrongCat& other);
     ~WrongCat() override;
 
-    void makeSound() const override;
+    // void makeSound() const override;
 
 };

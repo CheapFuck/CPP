@@ -43,7 +43,7 @@
     }
 
 
-void WrongCat::makeSound() const
-{
-    std::cout << "♫ WrongMiauw ♫" <<  std::endl;
-}
+// void WrongCat::makeSound() const
+// {
+//     std::cout << "♫ WrongMiauw ♫" <<  std::endl;
+// }

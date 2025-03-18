@@ -3,14 +3,14 @@
     // Default constructor
     Dog::Dog() : Animal()
     {
-        _type = "Dog";
+        type = "Dog";
         std::cout << "Dog default constructor called" << std::endl;
     }
 
     // Copy constructor
     Dog::Dog(const Dog& other) : Animal(other)
     {
-        _type = other._type;
+        type = other.type;
         std::cout << "Dog copy constructor called" << std::endl;
         // *this = other;
     }
@@ -22,7 +22,7 @@
         if (this != &other)
         {
             Animal::operator=(other);  // Call the base class assignment operator
-            _type = other._type;  // Copy the type 
+            type = other.type;  // Copy the type 
         }
         return *this;
     }
