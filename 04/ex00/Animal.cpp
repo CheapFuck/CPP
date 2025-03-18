@@ -1,22 +1,15 @@
 #include "Animal.hpp"
 
-// Constructors
-Animal::Animal() : type("Default")
+Animal::Animal()
 {
+    setType("Default");
     std::cout << "Animal default constructor called" << std::endl;
 }
 
-
-// Animal::Animal(const std::string name) : _type(name)
-// {
-//         std::cout << "Animal parameterized constructor called for " << _type << std::endl;
-// }
-
-
 Animal::Animal(const Animal& other)
 {
+    setType(other.type);
     std::cout << "Animal copy constructor called" << std::endl;
-    *this = other;
 }
 
 Animal& Animal::operator=(const Animal& other)
@@ -29,7 +22,6 @@ Animal& Animal::operator=(const Animal& other)
     return *this;
 }
 
-// Destructor
 Animal::~Animal()
 {
     std::cout << "Animal destructor called for " << type << std::endl;

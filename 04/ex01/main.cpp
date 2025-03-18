@@ -80,22 +80,33 @@ int main() {
     cat2 = cat1; // Using the copy assignment operator
     cat2.makeSound(); // Meow!
 
-    // Check if deep copy occurred by comparing memory addresses of `type`
-    if (dog1.getType() != dog2.getType())
-    {
-        std::cout << "Dog deep copy: Passed (different memory for type)" << std::endl;
-    } else
-    {
-        std::cout << "Dog deep copy: Failed (same memory for type)" << std::endl;
-    }
+std::cout << std::endl;
 
-    if (cat1.getType() != cat2.getType())
-    {
-        std::cout << "Cat deep copy: Passed (different memory for type)" << std::endl;
-    } else
-    {
-        std::cout << "Cat deep copy: Failed (same memory for type)" << std::endl;
+
+  // Check if the values are the same
+
+  std::cout << "type of dog1: " << dog1.getType() << std::endl;
+  std::cout << "type of dog2: " << dog2.getType() << std::endl;
+
+    if (dog1.getType() == dog2.getType()) {
+        std::cout << "Dog deep copy: Passed (same value for type)" << std::endl;
+    } else {
+        std::cout << "Dog deep copy: Failed (different value for type)" << std::endl;
     }
+std::cout << std::endl;
+
+    // Check if the memory addresses of the actual `std::string` objects inside the Animal instances are different
+  
+  std::cout << &dog1.getType() << std::endl;
+  std::cout << &dog2.getType() << std::endl;
+
+  
+    if (&dog1.getType() != &dog2.getType()) {
+        std::cout << "Dog deep copy: Passed (different memory addresses for type)" << std::endl;
+    } else {
+        std::cout << "Dog deep copy: Failed (same memory addresses for type)" << std::endl;
+    }
+std::cout << std::endl;
 
     return 0;
 }

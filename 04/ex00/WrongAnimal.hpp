@@ -6,18 +6,15 @@ class WrongAnimal
 {
 
 protected:
-    std::string _type;
+    std::string type;
 
 public:
-    WrongAnimal();                                 // Default constructor
-    // Animal(const std::string _type);          // Parameterized constructor
-    WrongAnimal(const WrongAnimal& other);            // Copy constructor
-    WrongAnimal& operator=(const WrongAnimal& other); // Copy assignment operator
-    virtual ~WrongAnimal();                                // Destructor
+    WrongAnimal();
+    WrongAnimal(const WrongAnimal& other);
+    WrongAnimal& operator=(const WrongAnimal& other);
+    /*virtual*/~WrongAnimal();
 
     void setType(std::string Wrong_animal_name);
     std::string getType(void) const;
-
-    /*virtual*/void makeSound() const;
-
+    /*virtual*/ void makeSound() const;
 };

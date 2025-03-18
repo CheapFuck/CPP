@@ -10,7 +10,6 @@ protected:
 
 public:
     Animal();                                 // Default constructor
-    // Animal(const std::string _type);          // Parameterized constructor
     Animal(const Animal& other);            // Copy constructor
     Animal& operator=(const Animal& other); // Copy assignment operator
     virtual ~Animal();                                // Destructor

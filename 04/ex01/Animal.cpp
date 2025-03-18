@@ -9,7 +9,7 @@ Animal::Animal()
 
 Animal::Animal(const Animal& other)
 {
-    setType(other._type);
+    setType(other.type);
     std::cout << "Animal copy constructor called" << std::endl;
 }
 
@@ -18,7 +18,7 @@ Animal& Animal::operator=(const Animal& other)
     std::cout << "Animal copy assignment operator called" << std::endl;
     if (this != &other)
     {
-        _type = other._type;
+        type = other.type;
     }
     return *this;
 }
@@ -26,17 +26,17 @@ Animal& Animal::operator=(const Animal& other)
 // Destructor
 Animal::~Animal()
 {
-    std::cout << "Animal destructor called for " << _type << std::endl;
+    std::cout << "Animal destructor called for " << type << std::endl;
 }
 
 void Animal::setType(std::string name)
 {
-    _type = name;
+    type = name;
 }
 
-std::string Animal::getType(void) const
+const std::string& Animal::getType(void) const
 {
-   return _type;
+   return type;
 }
 
 void Animal::makeSound() const
