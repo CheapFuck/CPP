@@ -1,6 +1,5 @@
 #include "Animal.hpp"
 
-// Constructors
 Animal::Animal()
 {
     setType("Default");
@@ -23,7 +22,6 @@ Animal& Animal::operator=(const Animal& other)
     return *this;
 }
 
-// Destructor
 Animal::~Animal()
 {
     std::cout << "Animal destructor called for " << type << std::endl;

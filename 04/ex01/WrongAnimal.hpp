@@ -17,5 +17,4 @@ public:
     void setType(std::string Wrong_animal_name);
     std::string getType(void) const;
     virtual void makeSound() const;
-
 };

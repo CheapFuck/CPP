@@ -1,6 +1,5 @@
 #include "Animal.hpp"
 
-// Constructors
 Animal::Animal()
 {
     setType("Default");

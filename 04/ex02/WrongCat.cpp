@@ -1,20 +1,20 @@
 #include "WrongCat.hpp"
 
-    WrongCat::WrongCat() : WrongAnimal()
-    {
-        type = "WrongCat";
-        this->brain = new Brain();
-        std::cout << "WrongCat default constructor called" << std::endl;
-    }
+WrongCat::WrongCat() : WrongAnimal()
+{
+    type = "WrongCat";
+    this->brain = new Brain();
+    std::cout << "WrongCat default constructor called" << std::endl;
+}
 
-    WrongCat::WrongCat(const WrongCat& other)
-    {
-        type = other.type;
-        this->brain = new Brain();
-        *this->brain = *other.brain;
-        std::cout << "WrongCat copy constructor called" << std::endl;
-        *this = other;
-    }
+WrongCat::WrongCat(const WrongCat& other)
+{
+    type = other.type;
+    this->brain = new Brain();
+    *this->brain = *other.brain;
+    std::cout << "WrongCat copy constructor called" << std::endl;
+    *this = other;
+}
 
 WrongCat& WrongCat::operator=(const WrongCat& other)
 {
