@@ -27,10 +27,10 @@ Animal::~Animal()
     std::cout << "Animal destructor called for " << type << std::endl;
 }
 
-// void Animal::setType(std::string name)
-// {
-//     _type = name;
-// }
+void Animal::setType(std::string name)
+{
+    type = name;
+}
 
 std::string Animal::getType(void) const
 {
