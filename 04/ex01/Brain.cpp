@@ -6,7 +6,7 @@ Brain::Brain()
     {
         ideas[i] = "Idea #" + std::to_string(i);
     }
-    std::cout << "Brain constructor called\n";
+    // std::cout << "Brain constructor called\n";
 }
 
 Brain::Brain(const Brain& other)
@@ -15,12 +15,12 @@ Brain::Brain(const Brain& other)
     {
         this->ideas[i] = other.ideas[i];
     }
-    std::cout << "Brain copy constructor called\n";
+    // std::cout << "Brain copy constructor called\n";
 }
 
 Brain& Brain::operator=(const Brain& other)
 {
-    std::cout << "Dog copy assignment operator called" << std::endl;
+    // std::cout << "Brain copy assignment operator called" << std::endl;
     if (this != &other)
     {
         for (int i = 0; i < 100; ++i)
@@ -33,6 +33,6 @@ Brain& Brain::operator=(const Brain& other)
 
 Brain::~Brain()
 {
-    std::cout << "Brain destructor called\n";
+    // std::cout << "Brain destructor called\n";
 }
 

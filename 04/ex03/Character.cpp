@@ -2,17 +2,17 @@
 
 Character::Character() : name(""), inventory{nullptr, nullptr, nullptr, nullptr}
 {
-    std::cout << "Character default constructor called" << std::endl;
+    // std::cout << "Character default constructor called" << std::endl;
 }
 
 Character::Character(std::string const & name) : name(name), inventory{nullptr, nullptr, nullptr, nullptr}
 {
-    std::cout << "Character name constructor called" << std::endl;
+    // std::cout << "Character name constructor called" << std::endl;
 }
 
 Character::Character(const Character& other) : name(other.name)
 {
-    std::cout << "Character copy constructor called" << std::endl;
+    // std::cout << "Character copy constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         inventory[i] = (other.inventory[i]) ? other.inventory[i]->clone() : nullptr;
@@ -20,7 +20,7 @@ Character::Character(const Character& other) : name(other.name)
 }
 Character& Character::operator=(const Character& other)
 {
-    std::cout << "Character copy assignment operator called" << std::endl;
+    // std::cout << "Character copy assignment operator called" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -42,9 +42,11 @@ Character& Character::operator=(const Character& other)
 
 Character::~Character()
 {
-    std::cout << "Character destructor called" << std::endl;
-    for (int i = 0; i < 4; i++) {
-        if (this->inventory[i]) {
+    // std::cout << "Character destructor called" << std::endl;
+    for (int i = 0; i < 4; i++)
+    {
+        if (this->inventory[i])
+        {
             delete this->inventory[i];
         }
     }
@@ -79,7 +81,7 @@ void Character::unequip(int idx)
     if (idx >= 0 && idx < 4 && inventory[idx])
     {
         std::cout << "Materia unequipped and deleted from slot " << idx << std::endl;
-        delete inventory[idx];  // Free memory
+        delete inventory[idx];
         inventory[idx] = nullptr;
     } else
     {

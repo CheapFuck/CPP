@@ -12,9 +12,9 @@ public:
     WrongAnimal();
     WrongAnimal(const WrongAnimal& other);
     WrongAnimal& operator=(const WrongAnimal& other);
-    /*virtual*/~WrongAnimal();
+    virtual ~WrongAnimal();
 
     void setType(std::string Wrong_animal_name);
     std::string getType(void) const;
-    /*virtual*/ void makeSound() const;
+    virtual void makeSound() const;
 };

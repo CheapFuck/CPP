@@ -2,7 +2,7 @@
 
 MateriaSource::MateriaSource()
 {
-    std::cout << "MateriaSource default constructor called" << std::endl;
+    // std::cout << "MateriaSource default constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         this->learned[i] = nullptr;
@@ -11,7 +11,7 @@ MateriaSource::MateriaSource()
 
 MateriaSource::MateriaSource(const MateriaSource& other)
 {
-    std::cout << "MateriaSource copy constructor called" << std::endl;
+    // std::cout << "MateriaSource copy constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         if (other.learned[i])
@@ -26,7 +26,7 @@ MateriaSource::MateriaSource(const MateriaSource& other)
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 {
-    std::cout << "MateriaSource copy assignment operator called" << std::endl;
+    // std::cout << "MateriaSource copy assignment operator called" << std::endl;
     if (this != &other)
     {
         for (int i = 0; i < 4; i++)
@@ -50,7 +50,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 
 MateriaSource::~MateriaSource()
 {
-    std::cout << "MateriaSource destructor called" << std::endl;
+    // std::cout << "MateriaSource destructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         if (this->learned[i])
@@ -83,7 +83,8 @@ void MateriaSource::learnMateria(AMateria* m)
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++)
+    {
         if (this->learned[i] && this->learned[i]->getType() == type)
         {
             std::cout << "Creating new materia of type: " << type << std::endl;
