@@ -1,10 +1,14 @@
-#pragma once
-#include <string>
-#include "AMateria.hpp"
+class IMateriaSource
+{
+    public:
+        virtual ~IMateriaSource() {}
 
-class IMateriaSource {
-public:
-    virtual ~IMateriaSource() {}
-    virtual void learnMateria(AMateria*) = 0;
-    virtual AMateria* createMateria(std::string const & type) = 0;
-};
+    protected:
+        IMateriaSource() = default;
+        IMateriaSource(const IMateriaSource&) = delete;
+        IMateriaSource& operator=(const IMateriaSource&) = delete;
+    
+    public:
+        virtual void learnMateria(AMateria*) = 0;
+        virtual AMateria* createMateria(std::string const & type) = 0;
+    };

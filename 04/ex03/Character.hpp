@@ -1,8 +1,8 @@
 #pragma once
-#include "ICharacter.hpp" // Include the full definition
-#include "AMateria.hpp"   // Include for AMateria*
+#include "AMateria.hpp"
 
-class Character : public ICharacter {
+class Character : public ICharacter
+{
 private:
     std::string name;
     AMateria* inventory[4];
@@ -12,7 +12,7 @@ public:
     Character(std::string const & name);
     Character(const Character& other);
     Character& operator=(const Character& other);
-    ~Character();
+    virtual ~Character();
     
     std::string const & getName() const override;
     void equip(AMateria* m) override;

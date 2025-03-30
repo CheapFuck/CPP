@@ -2,7 +2,8 @@
 #include "IMateriasource.hpp"
 
 
-class MateriaSource : public IMateriaSource {
+class MateriaSource : public IMateriaSource
+{
 private:
     AMateria* learned[4];
     

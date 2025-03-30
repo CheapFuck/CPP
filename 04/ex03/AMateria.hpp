@@ -1,24 +1,24 @@
 #pragma once
-#include "ICharacter.hpp" // Vereist omdat we erven van ICharacter
-#include <cstring>
+#include "ICharacter.hpp"
 #include <iostream>
 
-class ICharacter; // Forward declaration
+class ICharacter;
 
-class AMateria {
+class AMateria
+{
 protected:
     std::string type;
     
 public:
-    AMateria();                                // Default constructor
-    AMateria(std::string const & type);        // Parameterized constructor
-    AMateria(const AMateria& other);           // Copy constructor
-    AMateria& operator=(const AMateria& other); // Copy assignment operator
-    virtual ~AMateria();                       // Virtual destructor
+    AMateria();
+    AMateria(std::string const & type);
+    AMateria(const AMateria& other);
+    AMateria& operator=(const AMateria& other);
+    virtual ~AMateria();
     
     std::string const & getType() const;
     virtual std::string const & getName() const;
 
-    virtual AMateria* clone() const = 0;       // Pure virtual
+    virtual AMateria* clone() const = 0;
     virtual void use(ICharacter& target);
 };

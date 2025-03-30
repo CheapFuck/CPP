@@ -1,13 +1,10 @@
-// #include <iostream>
-// #include "AMateria.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
 #include "Character.hpp"
-// #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
 
-int main() {
-    // Test from the subject
+int main()
+{
     std::cout << "=== Basic Test from Subject ===" << std::endl;
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
