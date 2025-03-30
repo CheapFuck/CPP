@@ -5,10 +5,12 @@
 std::string getInput(const std::string& prompt)
 {
     std::string input;
-    do {
+    do
+    {
         std::cout << prompt;
         std::getline(std::cin, input);
-    } while (input.empty());
+    }
+    while (input.empty());
     return input;
 }
 

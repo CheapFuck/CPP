@@ -80,9 +80,12 @@ int main()
     // // Test unknown materia type
     // std::cout << "\n-- Testing Unknown Materia Type --" << std::endl;
     // tmp = source.createMateria("fire"); // Should return nullptr
-    // if (!tmp) {
+    // if (!tmp)
+    // {
     //     std::cout << "Successfully returned nullptr for unknown materia type" << std::endl;
-    // } else {
+    // }
+    // else
+    // {
     //     delete tmp;
     // }
     
