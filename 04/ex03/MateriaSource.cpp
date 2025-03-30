@@ -72,7 +72,6 @@ void MateriaSource::learnMateria(AMateria* m)
         if (this->learned[i] == nullptr)
         {
             this->learned[i] = m;
-            std::cout << "Materia learned in slot " << i << std::endl;
             return;
         }
     }
@@ -87,7 +86,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     {
         if (this->learned[i] && this->learned[i]->getType() == type)
         {
-            std::cout << "Creating new materia of type: " << type << std::endl;
             return this->learned[i]->clone();
         }
     }

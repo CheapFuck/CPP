@@ -69,7 +69,6 @@ void Character::equip(AMateria* m)
         if (this->inventory[i] == nullptr)
         {
             this->inventory[i] = m;
-            std::cout << "Materia equipped in slot " << i << std::endl;
             return;
         }
     }

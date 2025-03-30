@@ -5,7 +5,6 @@
 
 int main()
 {
-    std::cout << "=== Basic Test from Subject ===" << std::endl;
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
