@@ -10,7 +10,8 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string& target)
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other) 
     : AForm(other), target(other.target) {}
 
-RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other) {
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other)
+{
     if (this != &other) {
         AForm::operator=(other);
         this->target = other.target;
@@ -20,7 +21,8 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
-void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
     checkExecuteRequirements(executor);
     
     std::cout << "* Drilling noises *" << std::endl;
@@ -29,9 +31,12 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
     std::srand(std::time(NULL));
     
     // 50% chance of success
-    if (std::rand() % 2) {
+    if (std::rand() % 2)
+    {
         std::cout << target << " has been robotomized successfully!" << std::endl;
-    } else {
+    }
+    else
+    {
         std::cout << "Robotomy of " << target << " failed!" << std::endl;
     }
 }

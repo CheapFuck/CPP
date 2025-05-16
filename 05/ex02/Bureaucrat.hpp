@@ -8,7 +8,8 @@
 // Forward declaration
 class AForm;
 
-class Bureaucrat {
+class Bureaucrat
+{
 private:
     const std::string name;
     int grade;

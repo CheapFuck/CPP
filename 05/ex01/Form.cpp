@@ -17,8 +17,10 @@ Form::Form(const Form& other)
       gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute) {}
 
 // Copy Assignment Operator
-Form& Form::operator=(const Form& other) {
-    if (this != &other) {
+Form& Form::operator=(const Form& other)
+{
+    if (this != &other)
+    {
         isSigned = other.isSigned;
         // Note: gradeToSign and gradeToExecute are const, so they cannot be reassigned
     }
@@ -35,23 +37,27 @@ int Form::getGradeToSign() const { return gradeToSign; }
 int Form::getGradeToExecute() const { return gradeToExecute; }
 
 // beSigned implementation
-void Form::beSigned(const Bureaucrat& b) {
+void Form::beSigned(const Bureaucrat& b)
+{
     if (b.getGrade() > gradeToSign)
         throw GradeTooLowException();
     isSigned = true;
 }
 
 // Exception Methods
-const char* Form::GradeTooHighException::what() const noexcept {
+const char* Form::GradeTooHighException::what() const noexcept
+{
     return "Form: grade too high";
 }
 
-const char* Form::GradeTooLowException::what() const noexcept {
+const char* Form::GradeTooLowException::what() const noexcept
+{
     return "Form: grade too low";
 }
 
 // Overloaded ostream operator
-std::ostream& operator<<(std::ostream& os, const Form& f) {
+std::ostream& operator<<(std::ostream& os, const Form& f)
+{
     os << f.getName()
        << " (signed: " << std::boolalpha << f.getIsSigned()
        << ", grade to sign: " << f.getGradeToSign()

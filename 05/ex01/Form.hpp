@@ -6,7 +6,8 @@
 
 class Bureaucrat; // Forward declaration
 
-class Form {
+class Form
+{
 private:
     const std::string name;
     bool isSigned;
@@ -23,6 +24,7 @@ public:
 
     virtual ~Form(); // Virtual Destructor
     
+    //getters
     const std::string& getName() const;
     bool getIsSigned() const;
     int getGradeToSign() const;
@@ -31,14 +33,16 @@ public:
     void beSigned(const Bureaucrat& b);
 
     // Exception Classes
-    class GradeTooHighException : public std::exception {
+    class GradeTooHighException : public std::exception
+    {
     public:
         GradeTooHighException() noexcept = default;
         virtual ~GradeTooHighException() noexcept = default;
         virtual const char* what() const noexcept override;
     };
     
-    class GradeTooLowException : public std::exception {
+    class GradeTooLowException : public std::exception
+    {
     public:
         GradeTooLowException() noexcept = default;
         virtual ~GradeTooLowException() noexcept = default;

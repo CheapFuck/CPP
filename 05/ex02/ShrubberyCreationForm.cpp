@@ -20,13 +20,15 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
     checkExecuteRequirements(executor);
     
     std::string filename = target + "_shrubbery";
     std::ofstream outfile(filename.c_str());
     
-    if (!outfile.is_open()) {
+    if (!outfile.is_open())
+    {
         std::cerr << "Error: Could not open file " << filename << std::endl;
         return;
     }

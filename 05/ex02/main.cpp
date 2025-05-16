@@ -5,56 +5,62 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-void testBureaucrat() {
+void testBureaucrat()
+{
     std::cout << "--- Testing Bureaucrat class ---" << std::endl;
 
-    try {
+    try
+    {
         std::cout << "Creating a bureaucrat with grade 1 (highest):" << std::endl;
         Bureaucrat high("High Grade", 1);
         std::cout << high << std::endl;
 
         std::cout << "Trying to increment grade (should throw exception):" << std::endl;
         high.incrementGrade();
-    } catch (std::exception& e) {
+    }
+    catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-
     std::cout << std::endl;
-
-    try {
+    try
+    {
         std::cout << "Creating a bureaucrat with grade 150 (lowest):" << std::endl;
         Bureaucrat low("Low Grade", 150);
         std::cout << low << std::endl;
 
         std::cout << "Trying to decrement grade (should throw exception):" << std::endl;
         low.decrementGrade();
-    } catch (std::exception& e) {
+    }
+    catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-
     std::cout << std::endl;
-
-    try {
+    try
+    {
         std::cout << "Creating a bureaucrat with invalid grade 0:" << std::endl;
         Bureaucrat invalid("Invalid", 0);
         std::cout << invalid << std::endl;
-    } catch (std::exception& e) {
+    }
+    catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-
     std::cout << std::endl;
-
-    try {
+    try
+    {
         std::cout << "Creating a bureaucrat with invalid grade 151:" << std::endl;
         Bureaucrat invalid("Invalid", 151);
         std::cout << invalid << std::endl;
-    } catch (std::exception& e) {
+    }
+    catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-
     std::cout << std::endl;
-
-    try {
+    try
+    {
         std::cout << "Creating a bureaucrat with grade 75:" << std::endl;
         Bureaucrat mid("Middle Grade", 75);
         std::cout << mid << std::endl;
@@ -67,15 +73,19 @@ void testBureaucrat() {
         mid.decrementGrade();
         mid.decrementGrade();
         std::cout << mid << std::endl;
-    } catch (std::exception& e) {
+    }
+    catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 }
 
-void testShrubberyCreationForm() {
+void testShrubberyCreationForm()
+{
     std::cout << "\n--- Testing ShrubberyCreationForm ---" << std::endl;
 
-    try {
+    try
+    {
         ShrubberyCreationForm form("garden");
         std::cout << form << std::endl;
 
@@ -101,15 +111,19 @@ void testShrubberyCreationForm() {
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
-    } catch (std::exception& e) {
+    }
+    catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 }
 
-void testRobotomyRequestForm() {
+void testRobotomyRequestForm()
+{
     std::cout << "\n--- Testing RobotomyRequestForm ---" << std::endl;
 
-    try {
+    try
+    {
         RobotomyRequestForm form("Bender");
         std::cout << form << std::endl;
 
@@ -135,15 +149,18 @@ void testRobotomyRequestForm() {
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
-    } catch (std::exception& e) {
+    } catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 }
 
-void testPresidentialPardonForm() {
+void testPresidentialPardonForm()
+{
     std::cout << "\n--- Testing PresidentialPardonForm ---" << std::endl;
 
-    try {
+    try
+    {
         PresidentialPardonForm form("Arthur Dent");
         std::cout << form << std::endl;
 
@@ -169,12 +186,14 @@ void testPresidentialPardonForm() {
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
-    } catch (std::exception& e) {
+    } catch (std::exception& e)
+    {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
 }
 
-int main() {
+int main()
+{
     testBureaucrat();
     testShrubberyCreationForm();
     testRobotomyRequestForm();
