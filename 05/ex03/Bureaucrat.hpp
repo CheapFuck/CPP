@@ -7,7 +7,8 @@
 // Forward declaration
 class AForm;
 
-class Bureaucrat {
+class Bureaucrat
+{
 private:
     const std::string name;
     int grade;
@@ -32,12 +33,14 @@ public:
     void executeForm(AForm const & form) const;
 
     // Exceptions
-    class GradeTooHighException : public std::exception {
+    class GradeTooHighException : public std::exception
+    {
     public:
         virtual const char* what() const throw();
     };
 
-    class GradeTooLowException : public std::exception {
+    class GradeTooLowException : public std::exception
+    {
     public:
         virtual const char* what() const throw();
     };

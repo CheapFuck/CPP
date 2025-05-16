@@ -6,7 +6,8 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-class Intern {
+class Intern
+{
 public:
     Intern();
     Intern(const Intern& other);

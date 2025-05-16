@@ -3,7 +3,8 @@
 #include <cstdlib>
 #include <ctime>
 
-class RobotomyRequestForm : public AForm {
+class RobotomyRequestForm : public AForm
+{
 private:
     std::string target;
 

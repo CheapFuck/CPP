@@ -10,8 +10,10 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string& target)
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& other) 
     : AForm(other), target(other.target) {}
 
-PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& other) {
-    if (this != &other) {
+PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& other)
+{
+    if (this != &other)
+    {
         AForm::operator=(other);
         this->target = other.target;
     }
@@ -20,7 +22,8 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
-void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
     checkExecuteRequirements(executor);
     
     std::cout << target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
