@@ -8,7 +8,8 @@
 // Forward declaration
 class Bureaucrat;
 
-class AForm {
+class AForm
+{
 private:
     const std::string name;
     bool isSigned;
@@ -36,17 +37,20 @@ public:
     void checkExecuteRequirements(Bureaucrat const & executor) const;
 
     // Exceptions
-    class GradeTooHighException : public std::exception {
+    class GradeTooHighException : public std::exception
+    {
     public:
         virtual const char* what() const throw();
     };
 
-    class GradeTooLowException : public std::exception {
+    class GradeTooLowException : public std::exception
+    {
     public:
         virtual const char* what() const throw();
     };
 
-    class FormNotSignedException : public std::exception {
+    class FormNotSignedException : public std::exception
+    {
     public:
         virtual const char* what() const throw();
     };
