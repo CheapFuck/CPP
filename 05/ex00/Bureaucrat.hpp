@@ -1,10 +1,10 @@
 #pragma once
-
 #include <string>
 #include <iostream>
 #include <exception>
 
-class Bureaucrat {
+class Bureaucrat
+{
 private:
     const std::string name;
     int grade;
@@ -21,11 +21,13 @@ public:
     void incrementGrade();
     void decrementGrade();
 
-    class GradeTooHighException : public std::exception {
+    class GradeTooHighException : public std::exception
+    {
         const char* what() const throw();
     };
 
-    class GradeTooLowException : public std::exception {
+    class GradeTooLowException : public std::exception
+    {
         const char* what() const throw();
     };
 };
