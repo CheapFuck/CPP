@@ -1,6 +1,4 @@
-#ifndef INTERN_HPP
-#define INTERN_HPP
-
+#pragma once
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
@@ -23,5 +21,3 @@ private:
     AForm* createRobotomyRequestForm(const std::string& target);
     AForm* createPresidentialPardonForm(const std::string& target);
 };
-
-#endif

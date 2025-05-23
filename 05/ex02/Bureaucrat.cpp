@@ -1,8 +1,8 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 
-// Constructors and destructor
-Bureaucrat::Bureaucrat() : name("Default"), grade(150) {}
+Bureaucrat::Bureaucrat() : name("Default"), grade(150)
+{}
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name)
 {
@@ -13,32 +13,24 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name)
     this->grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade) {}
+Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade)
+{}
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
     if (this != &other)
     {
-        // Can't assign to const name
         this->grade = other.grade;
     }
     return *this;
 }
 
-Bureaucrat::~Bureaucrat() {}
+Bureaucrat::~Bureaucrat()
+{}
 
-// Getters
-std::string Bureaucrat::getName() const
-{
-    return name;
-}
+std::string Bureaucrat::getName() const { return name; }
+int Bureaucrat::getGrade() const { return grade; }
 
-int Bureaucrat::getGrade() const
-{
-    return grade;
-}
-
-// Grade modification
 void Bureaucrat::incrementGrade()
 {
     if (grade <= 1)
@@ -53,7 +45,6 @@ void Bureaucrat::decrementGrade()
     grade++;
 }
 
-// Form operations
 void Bureaucrat::signForm(AForm& form)
 {
     try
@@ -82,7 +73,6 @@ void Bureaucrat::executeForm(AForm const & form) const
     }
 }
 
-// Exception implementations
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
     return "Grade is too high! The highest grade is 1.";
@@ -93,7 +83,6 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return "Grade is too low! The lowest grade is 150.";
 }
 
-// Insertion operator overload
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 {
     os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".";

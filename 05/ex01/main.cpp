@@ -1,15 +1,9 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-void printDivider(const std::string& title)
-{
-    std::cout << "\n=== " << title << " ===\n";
-}
-
 int main()
 {
-    // Test 1: Valid form signing
-    printDivider("Test 1: Valid Bureaucrat signs a valid Form");
+    std::cout << "\n=== " <<  "Test 1: Valid Bureaucrat signs a valid Form" << " ===\n";
     try
     {
         Bureaucrat b1("Alice", 50);
@@ -25,8 +19,7 @@ int main()
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
-    // Test 2: Bureaucrat with too low grade tries to sign
-    printDivider("Test 2: Low-grade Bureaucrat cannot sign Form");
+    std::cout << "\n=== " <<  "Test 2: Low-grade Bureaucrat cannot sign Form" << " ===\n";
     try
     {
         Bureaucrat b2("Bob", 100);
@@ -39,46 +32,42 @@ int main()
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
-    // Test 3: Form creation with too high grade
-    printDivider("Test 3: Create Form with grade too high (0)");
+    std::cout << "\n=== " <<  "Test 3: Create Form with grade too high (0)" << " ===\n";
     try
     {
-        Form f3("BadForm", 0, 10); // Invalid: 0 is too high
+        Form f3("BadForm", 0, 10);
     }
     catch (std::exception& e)
     {
         std::cerr << "Caught: " << e.what() << std::endl;
     }
 
-    // Test 4: Form creation with too low grade
-    printDivider("Test 4: Create Form with grade too low (151)");
+    std::cout << "\n=== " <<  "Test 4: Create Form with grade too low (151)" << " ===\n";
     try
     {
-        Form f4("AnotherBadForm", 151, 150); // Invalid: 151 is too low
+        Form f4("AnotherBadForm", 151, 150);
     }
     catch (std::exception& e)
     {
         std::cerr << "Caught: " << e.what() << std::endl;
     }
 
-    // Test 5: Bureaucrat incrementing beyond max
-    printDivider("Test 5: Bureaucrat increment beyond grade 1");
+    std::cout << "\n=== " <<  "Test 5: Bureaucrat increment beyond grade 1" << " ===\n";
     try
     {
         Bureaucrat b3("Carol", 1);
-        b3.incrementGrade(); // Should throw
+        b3.incrementGrade();
     }
     catch (std::exception& e)
     {
         std::cerr << "Caught: " << e.what() << std::endl;
     }
-
-    // Test 6: Bureaucrat decrementing beyond min
-    printDivider("Test 6: Bureaucrat decrement below grade 150");
+    
+    std::cout << "\n=== " <<  "Test 6: Bureaucrat decrement below grade 150" << " ===\n";
     try
     {
         Bureaucrat b4("Dave", 150);
-        b4.decrementGrade(); // Should throw
+        b4.decrementGrade();
     }
     catch (std::exception& e)
     {

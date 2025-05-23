@@ -2,13 +2,16 @@
 #include "Bureaucrat.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() 
-    : AForm("Robotomy Request Form", 72, 45), target("default") {}
+    : AForm("Robotomy Request Form", 72, 45), target("default")
+{}
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string& target) 
-    : AForm("Robotomy Request Form", 72, 45), target(target) {}
+    : AForm("Robotomy Request Form", 72, 45), target(target)
+{}
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other) 
-    : AForm(other), target(other.target) {}
+    : AForm(other), target(other.target)
+{}
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other)
 {
@@ -20,7 +23,8 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
     return *this;
 }
 
-RobotomyRequestForm::~RobotomyRequestForm() {}
+RobotomyRequestForm::~RobotomyRequestForm()
+{}
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
@@ -28,10 +32,8 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     
     std::cout << "* Drilling noises *" << std::endl;
     
-    // Seed the random number generator
     std::srand(std::time(NULL));
     
-    // 50% chance of success
     if (std::rand() % 2)
     {
         std::cout << target << " has been robotomized successfully!" << std::endl;

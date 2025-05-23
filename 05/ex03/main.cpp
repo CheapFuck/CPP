@@ -151,7 +151,8 @@ void testRobotomyRequestForm()
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
-    } catch (std::exception& e)
+    }
+    catch (std::exception& e)
     {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }

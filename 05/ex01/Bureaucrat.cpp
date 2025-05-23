@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"	
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name)
 {
@@ -22,15 +23,8 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 Bureaucrat::~Bureaucrat()
 {}
 
-const std::string& Bureaucrat::getName() const
-{
-    return name;
-}
-
-int Bureaucrat::getGrade() const
-{
-    return grade;
-}
+const std::string& Bureaucrat::getName() const { return name; }
+int Bureaucrat::getGrade() const { return grade; }
 
 void Bureaucrat::incrementGrade()
 {

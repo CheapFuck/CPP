@@ -1,10 +1,8 @@
 #pragma once
-
 #include <string>
 #include <iostream>
 #include <exception>
 
-// Forward declaration
 class AForm;
 
 class Bureaucrat
@@ -20,19 +18,15 @@ public:
     Bureaucrat& operator=(const Bureaucrat& other);
     ~Bureaucrat();
 
-    // Getters
     std::string getName() const;
     int getGrade() const;
 
-    // Grade modification
     void incrementGrade();
     void decrementGrade();
 
-    // Form operations
     void signForm(AForm& form);
     void executeForm(AForm const & form) const;
 
-    // Exceptions
     class GradeTooHighException : public std::exception
     {
     public:
@@ -46,5 +40,4 @@ public:
     };
 };
 
-// Insertion operator overload
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);

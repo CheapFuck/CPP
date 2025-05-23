@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
@@ -95,11 +94,9 @@ void testShrubberyCreationForm()
 
         std::cout << "\nTesting form signing and execution:" << std::endl;
         
-        // Low grade bureaucrat can't sign
         std::cout << "Low grade bureaucrat trying to sign (should fail):" << std::endl;
         low.signForm(form);
         
-        // Mid grade bureaucrat can sign but can't execute
         std::cout << "\nMid grade bureaucrat signing:" << std::endl;
         mid.signForm(form);
         std::cout << form << std::endl;
@@ -107,7 +104,6 @@ void testShrubberyCreationForm()
         std::cout << "Mid grade bureaucrat trying to execute (should fail):" << std::endl;
         mid.executeForm(form);
         
-        // High grade bureaucrat can execute
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
@@ -133,11 +129,9 @@ void testRobotomyRequestForm()
 
         std::cout << "\nTesting form signing and execution:" << std::endl;
         
-        // Low grade bureaucrat can't sign
         std::cout << "Low grade bureaucrat trying to sign (should fail):" << std::endl;
         low.signForm(form);
         
-        // Mid grade bureaucrat can sign but can't execute
         std::cout << "\nMid grade bureaucrat signing:" << std::endl;
         mid.signForm(form);
         std::cout << form << std::endl;
@@ -145,11 +139,11 @@ void testRobotomyRequestForm()
         std::cout << "Mid grade bureaucrat trying to execute (should fail):" << std::endl;
         mid.executeForm(form);
         
-        // High grade bureaucrat can execute
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
-    } catch (std::exception& e)
+    }
+    catch (std::exception& e)
     {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
@@ -170,11 +164,9 @@ void testPresidentialPardonForm()
 
         std::cout << "\nTesting form signing and execution:" << std::endl;
         
-        // Low grade bureaucrat can't sign
         std::cout << "Low grade bureaucrat trying to sign (should fail):" << std::endl;
         low.signForm(form);
         
-        // Mid grade bureaucrat can sign but can't execute
         std::cout << "\nMid grade bureaucrat signing:" << std::endl;
         mid.signForm(form);
         std::cout << form << std::endl;
@@ -182,11 +174,11 @@ void testPresidentialPardonForm()
         std::cout << "Mid grade bureaucrat trying to execute (should fail):" << std::endl;
         mid.executeForm(form);
         
-        // High grade bureaucrat can execute
         std::cout << "\nHigh grade bureaucrat executing:" << std::endl;
         high.executeForm(form);
 
-    } catch (std::exception& e)
+    }
+    catch (std::exception& e)
     {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }

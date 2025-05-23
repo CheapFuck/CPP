@@ -1,6 +1,4 @@
-#ifndef ROBOTOMYREQUESTFORM_HPP
-#define ROBOTOMYREQUESTFORM_HPP
-
+#pragma once
 #include "AForm.hpp"
 #include <cstdlib>
 #include <ctime>
@@ -18,5 +16,3 @@ public:
 
     void execute(Bureaucrat const & executor) const;
 };
-
-#endif

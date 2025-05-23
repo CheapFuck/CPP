@@ -7,10 +7,10 @@ int main()
         Bureaucrat b1("Alice", 2);
         std::cout << b1 << std::endl;
 
-        b1.incrementGrade();  // Should succeed
+        b1.incrementGrade();
         std::cout << b1 << std::endl;
 
-        b1.incrementGrade();  // Should throw
+        b1.incrementGrade();
     }
     catch (std::exception& e)
     {
@@ -18,7 +18,7 @@ int main()
     }
     try
     {
-        Bureaucrat b2("Bob", 151);  // Invalid grade
+        Bureaucrat b2("Bob", 151);
     }
     catch (std::exception& e)
     {

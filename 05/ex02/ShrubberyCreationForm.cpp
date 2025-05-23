@@ -2,15 +2,19 @@
 #include "Bureaucrat.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() 
-    : AForm("Shrubbery Creation Form", 145, 137), target("default") {}
+    : AForm("Shrubbery Creation Form", 145, 137), target("default")
+{}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target) 
-    : AForm("Shrubbery Creation Form", 145, 137), target(target) {}
+    : AForm("Shrubbery Creation Form", 145, 137), target(target)
+{}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other) 
-    : AForm(other), target(other.target) {}
+    : AForm(other), target(other.target)
+{}
 
-ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other) {
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
+{
     if (this != &other) {
         AForm::operator=(other);
         this->target = other.target;
@@ -18,7 +22,8 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
     return *this;
 }
 
-ShrubberyCreationForm::~ShrubberyCreationForm() {}
+ShrubberyCreationForm::~ShrubberyCreationForm()
+{}
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
@@ -33,15 +38,16 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         return;
     }
     
-    outfile << "       _-_" << std::endl;
-    outfile << "    /~~   ~~\\" << std::endl;
-    outfile << " /~~         ~~\\" << std::endl;
-    outfile << "{               }" << std::endl;
-    outfile << " \\  _-     -_  /" << std::endl;
-    outfile << "   ~  \\\\ //  ~" << std::endl;
-    outfile << "_- -   | | _- _" << std::endl;
-    outfile << "  _ -  | |   -_" << std::endl;
-    outfile << "      // \\\\" << std::endl;
+    outfile << "       _-_              _-_" << std::endl;
+    outfile << "    /~~   ~~\\       /~~   ~~\\" << std::endl;
+    outfile << " /~~         ~~\\ /~~         ~~\\" << std::endl;
+    outfile << "{               }{               }" << std::endl;
+    outfile << " \\  _-     -_  / \\  _-     -_  /" << std::endl;
+    outfile << "   ~  \\\\ //  ~     ~  \\\\ //  ~" << std::endl;
+    outfile << "_- -   | | _- _ _- -   | | _- _" << std::endl;
+    outfile << "  _ -  | |   -_   _ -  | |   -_" << std::endl;
+    outfile << "      // \\\\           // \\\\" << std::endl;
+    
     
     outfile.close();
     std::cout << "Created shrubbery file: " << filename << std::endl;

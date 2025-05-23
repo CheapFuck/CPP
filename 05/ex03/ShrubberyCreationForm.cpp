@@ -35,15 +35,15 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         return;
     }
     
-    outfile << "       _-_" << std::endl;
-    outfile << "    /~~   ~~\\" << std::endl;
-    outfile << " /~~         ~~\\" << std::endl;
-    outfile << "{               }" << std::endl;
-    outfile << " \\  _-     -_  /" << std::endl;
-    outfile << "   ~  \\\\ //  ~" << std::endl;
-    outfile << "_- -   | | _- _" << std::endl;
-    outfile << "  _ -  | |   -_" << std::endl;
-    outfile << "      // \\\\" << std::endl;
+    outfile << "       _-_              _-_" << std::endl;
+    outfile << "    /~~   ~~\\       /~~   ~~\\" << std::endl;
+    outfile << " /~~         ~~\\ /~~         ~~\\" << std::endl;
+    outfile << "{               }{               }" << std::endl;
+    outfile << " \\  _-     -_  / \\  _-     -_  /" << std::endl;
+    outfile << "   ~  \\\\ //  ~     ~  \\\\ //  ~" << std::endl;
+    outfile << "_- -   | | _- _ _- -   | | _- _" << std::endl;
+    outfile << "  _ -  | |   -_   _ -  | |   -_" << std::endl;
+    outfile << "      // \\\\           // \\\\" << std::endl;
     
     outfile.close();
     std::cout << "Created shrubbery file: " << filename << std::endl;

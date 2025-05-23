@@ -1,12 +1,9 @@
 #pragma once
-
 #include <string>
 #include <iostream>
 #include <exception>
 
-// Forward declaration
 class Bureaucrat;
-
 class AForm
 {
 private:
@@ -22,20 +19,16 @@ public:
     AForm& operator=(const AForm& other);
     virtual ~AForm();
 
-    // Getters
     std::string getName() const;
     bool getIsSigned() const;
     int getGradeToSign() const;
     int getGradeToExecute() const;
 
-    // Sign form
     void beSigned(const Bureaucrat& bureaucrat);
 
-    // Execute form
     virtual void execute(Bureaucrat const & executor) const = 0;
     void checkExecuteRequirements(Bureaucrat const & executor) const;
 
-    // Exceptions
     class GradeTooHighException : public std::exception
     {
     public:
@@ -54,5 +47,4 @@ public:
     };
 };
 
-// Insertion operator overload
 std::ostream& operator<<(std::ostream& os, const AForm& form);

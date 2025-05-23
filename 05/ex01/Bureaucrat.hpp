@@ -1,7 +1,9 @@
 #pragma once
-#include "Bureaucrat.hpp"
-#include "Form.hpp"	
+#include <string>
+#include <iostream>
+#include <exception>
 
+class Form;
 class Bureaucrat
 {
 private:
